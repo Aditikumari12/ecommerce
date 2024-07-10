@@ -1,4 +1,13 @@
 import iphone15 from "../images/iphone15.jpeg";
+import Samsung from "../images/Samsung.jpg";
+import sony from "../images/sony.jpg";
+import nike from "../images/nike.png";
+import adidas from "../images/adidas.jpg";
+import north from "../images/north.jpg";
+import levi from "../images/levi.jpg";
+import Apple from "../images/Apple.jpg";
+import dell from "../images/dell.jpg";
+import canon from "../images/canon.jpeg";
 
 
 const Products = [
@@ -16,7 +25,7 @@ const Products = [
       price: '1,39,999',
       rating: 4.6,
       category: 'Electronics',
-      image: '../images/Samsung.jpg',
+      image: Samsung,
     },
     {
       id: 3,
@@ -24,7 +33,7 @@ const Products = [
       price: '22,990',
       rating: 4.7,
       category: 'Electronics',
-      image: '../images/sony.jpg',
+      image: sony,
     },
     {
       id: 4,
@@ -32,7 +41,7 @@ const Products = [
       price: '8797',
       rating: 4.5,
       category: 'Footwear',
-      image: 'images/nike.jpg',
+      image: nike,
     },
     {
       id: 5,
@@ -40,7 +49,7 @@ const Products = [
       price: '3249',
       rating: 4.6,
       category: 'Footwear',
-      image: 'images/adidas.jpg',
+      image: adidas,
     },
     {
       id: 6,
@@ -48,7 +57,7 @@ const Products = [
       price: '11,000',
       rating: 4.9,
       category: 'Clothing',
-      image: 'images/north.jpg',
+      image: north,
     },
     {
       id: 7,
@@ -56,7 +65,7 @@ const Products = [
       price: '3834',
       rating: 4.4,
       category: 'Clothing',
-      image: 'images/levi.jpg',
+      image: levi,
     },
     {
       id: 8,
@@ -64,7 +73,7 @@ const Products = [
       price: '2,50,000',
       rating: 4.8,
       category: 'Electronics',
-      image: 'images/Apple.jpg',
+      image: Apple,
     },
     {
       id: 9,
@@ -72,7 +81,7 @@ const Products = [
       price: '4,00,000',
       rating: 4.7,
       category: 'Electronics',
-      image: 'images/dell.jpg',
+      image: dell,
     },
     {
       id: 10,
@@ -80,7 +89,7 @@ const Products = [
       price: '2,50,000',
       rating: 4.9,
       category: 'Electronics',
-      image: 'images/canon.jpg',
+      image: canon,
     },
   ];
   
