@@ -1,5 +1,7 @@
 import React from "react";
 import Search from "./Search";
+import Dropdown from "./Dropdown";
+import Products from "../data/Products";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -8,8 +10,23 @@ const Navbar = (prop) => {
     const getData = (search) => {
         prop.getData(search);
     }
+
+    const options = [
+        {value:"Electronics", label:"Electronics"},
+        {value:"Footwear", label:"Footwear"},
+        {value:"Clothing", label:"Clothing"}
+    ];
+
+    const handleSelect = (option) => {
+        console.log(option);
+        prop.getDropdownData(option);
+    }
+
+
+    
     return (
         <>
+            
             <nav class="navbar navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="#">Navbar</a>
@@ -19,20 +36,12 @@ const Navbar = (prop) => {
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                         
-                        <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                        </a>
-                        <ul class="dropdown-menu">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li><hr class="dropdown-divider"/></li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                        </li>
-                        
-                    </ul>
-                    <Search getData={getData}/>
+                    <li class="nav-item dropdown">
+                        <Dropdown options={options} onSelect={handleSelect}/>
+                    </li>
+                                
+                    </ul>  
+                        <Search getData={getData}/>
                     </div>
                 </div>
             </nav>

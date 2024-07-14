@@ -13,9 +13,14 @@ const ProductList = () => {
         setProd(temp);
     }
 
+    const onFilter = (option) => {
+        const temp2 = products.filter(y => y.category.includes(option.value));
+        setProd(temp2);
+    }
+
     return (
         <>
-            <Navbar getData={getData}/>
+            <Navbar getDropdownData={onFilter} getData={getData}/>
 
             {prod.map((val, index) => (
                 <div key={index} className="card" style={{ width: "18rem" }}>
