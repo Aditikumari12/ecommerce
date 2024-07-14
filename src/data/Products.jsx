@@ -16,7 +16,7 @@ const Products = [
       name: 'Apple iPhone 15 pro amx',
       price: '1,52,000',
       rating: 4.8,
-      category: 'Electronics and computer',
+      category: 'Electronics',
       image: iphone15,
     },
     {
