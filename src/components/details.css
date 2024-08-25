@@ -1,0 +1,15 @@
+.main{
+    display: flex;
+    flex-direction: row;
+    max-width: 1080px;
+    margin: auto;
+    margin-top: 100px;
+}
+.detailsImg{
+    height: auto;
+    width: 500px;
+    margin: 20px;
+}
+.detButton button{
+    margin: 10px;
+}

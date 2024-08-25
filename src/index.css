@@ -41,3 +41,7 @@ code {
 .dropdown-item:hover {
   background-color: #f1f1f1;
 }
+
+.width220{
+  width: 220px;
+}

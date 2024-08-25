@@ -10,12 +10,14 @@ const Search = (prop) => {
     setSearch(e.target.value);
   }
 
-  const handleClick = () => {
+  const handleClick = (event) => {
+    console.log("search ",search);
     prop.getData(search);
   }
 
   return (
-    <form className="d-flex" role="search" >
+    <>
+    <div className="width220">
       <input
         className="form-control me-2"
         type="text"
@@ -24,10 +26,11 @@ const Search = (prop) => {
         value={search}
         onChange={handleSearch}
       />
-      <button className="btn btn-outline-success" type="submit" onClick={handleClick}>
+      </div>
+      <button className="btn btn-outline-success" onClick={handleClick}>
         Search
       </button>
-    </form>
+    </>
   );
 };
 

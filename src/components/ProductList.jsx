@@ -2,6 +2,7 @@ import React, {useState} from "react";
 import products from "../data/Products";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from "./Navbar";
+import { Link } from "react-router-dom";
 
 
 const ProductList = () => {
@@ -23,6 +24,7 @@ const ProductList = () => {
             <Navbar getDropdownData={onFilter} getData={getData}/>
 
             {prod.map((val, index) => (
+                <Link to={`/productDetails/${val.id}`}>
                 <div key={index} className="card" style={{ width: "18rem" }}>
                     <img src={val.image} className="card-img-top" alt={val.name} />
                     <div className="card-body">
@@ -33,6 +35,7 @@ const ProductList = () => {
                         <a href="#" className="btn btn-primary">Add to cart</a>
                     </div>
                 </div>
+                </Link>
             ))}
         </>
     );

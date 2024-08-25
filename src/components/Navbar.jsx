@@ -11,18 +11,17 @@ const Navbar = (prop) => {
         prop.getData(search);
     }
 
-    const options = [
-        {value:"Electronics", label:"Electronics"},
-        {value:"Footwear", label:"Footwear"},
-        {value:"Clothing", label:"Clothing"}
-    ];
+    let options = [...new Set(Products.map(item => item.category))].sort(); 
+    console.log("options = ",options);
+    
+    options = options.map(op => { 
+    return { value : op,  label : op}
+    });
 
     const handleSelect = (option) => {
         console.log(option);
         prop.getDropdownData(option);
     }
-
-
     
     return (
         <>
